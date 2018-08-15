@@ -21,8 +21,10 @@
   },
   "homepage": "https://github.com/Kettlecat-team/kettlecat-apollo#readme",
   "dependencies": {
+    "apollo-server-express": "^2.0.2",
     "body-parser": "^1.18.3",
     "express": "^4.16.3",
+    "graphql": "^0.13.2",
     "mongoose": "^5.2.8",
     "morgan": "^1.9.0"
   }

@@ -3,6 +3,7 @@ const logger = require("morgan");
 const mongoose = require("mongoose");
 // var cors = require("cors");
 const bodyParser = require("body-parser");
+const { ApolloServer, gql } = require("apollo-server-express");
 
 // defining the port for the app to listen to
 var PORT = process.env.PORT || 5000;
@@ -36,6 +37,30 @@ mongoose.connect(
   MONGODB_URI,
   { useNewUrlParser: true }
 );
+
+// TODO typeDefs and resolvers to modularize
+const typeDefs = gql`
+  type Query {
+    "A simple type for getting started!"
+    hello: String
+  }
+`;
+
+// A map of functions which return data for the schema.
+const resolvers = {
+  Query: {
+    hello: () => "world"
+  }
+};
+
+const server = new ApolloServer({
+  // These will be defined for both new or existing servers
+  typeDefs,
+  resolvers
+});
+
+// telling the app to use Apollo to process requests.
+server.applyMiddleware({ app });
 
 // Start App on PORT
 app.listen(PORT, function() {
