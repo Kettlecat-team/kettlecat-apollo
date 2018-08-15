@@ -1,0 +1,29 @@
+{
+  "name": "kettlecat-apollo",
+  "version": "1.0.0",
+  "description": "a Node.js server based on Express, Mongo and Apollo to deliver Kettlecat apps data",
+  "main": "server.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kettlecat-team/kettlecat-apollo.git"
+  },
+  "keywords": [
+    "kettlecat",
+    "graphQL"
+  ],
+  "author": "M Burlat",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/Kettlecat-team/kettlecat-apollo/issues"
+  },
+  "homepage": "https://github.com/Kettlecat-team/kettlecat-apollo#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
+    "mongoose": "^5.2.8",
+    "morgan": "^1.9.0"
+  }
+}
